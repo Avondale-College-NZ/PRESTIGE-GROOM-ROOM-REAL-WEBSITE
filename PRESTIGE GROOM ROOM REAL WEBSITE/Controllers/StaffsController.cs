@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using PRESTIGE_GROOM_ROOM_REAL_WEBSITE.Data;
 using PRESTIGE_GROOM_ROOM_REAL_WEBSITE.Models;
 
-namespace PRESTIGE_GROOM_ROOM_REAL_WEBSITE.Controllers
+namespace PRESTIGE_GROOM_ROOM_REAL_WEBSITE.Controllers 
 {
     public class StaffsController : Controller
     {
