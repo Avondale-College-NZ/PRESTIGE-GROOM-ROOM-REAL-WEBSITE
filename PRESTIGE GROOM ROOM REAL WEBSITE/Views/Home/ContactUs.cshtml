@@ -1,0 +1,84 @@
+﻿@{
+    ViewData["Title"] = "Contact Us";
+}
+<head>
+    <link href="~/css/site - Copy.css" rel="stylesheet" />
+    <style>
+        /* Change the link color on hover */
+        li a:hover {
+            background-color: black;
+            color: white;
+        }
+
+        body {
+            color: white;
+        }
+
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: verdana;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        input[type=text], select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            resize: vertical;
+        }
+
+        input[type=submit] {
+            background-color: black;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+            input[type=submit]:hover {
+                background-color: gold;
+            }
+
+
+        .container {
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body class="slide2">
+
+    <h3>Contact Form</h3>
+<div class="container">
+    <form method="POST">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+        <label for="Email">Email</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+        <label for="Inquiry">Inquiry</label>
+        <textarea id="Inquiry" name="Inquiry" placeholder="Write something.." style="height:200px"></textarea>
+
+        <input type="submit" value="Submit">
+    </form>
+</div>
+</body>
+</html>

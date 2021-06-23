@@ -1,0 +1,93 @@
+﻿@{
+    ViewData["Title"] = "Book Now";
+}
+<head>
+    <link href="~/css/site - Copy.css" rel="stylesheet" />
+    <style>
+        /* Change the link color on hover */
+        li a:hover {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Verdana;
+        }
+
+
+        input[type=text], select, textarea {
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 2px;
+            box-sizing: border-box;
+            margin-top: 2px;
+            margin-bottom: 5px;
+            resize: vertical;
+        }
+
+        input[type=submit] {
+            background-color: black;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+            input[type=submit]:hover {
+                background-color: gold;
+            }
+
+        .container {
+            border-radius: 2px;
+            color: white;
+
+        }
+    </style>
+</head>
+<body class="slide4">
+    <h1 style="font-family:'verdana';" color:black;">Book Now</h1>
+    <div class="container">
+        <form method="POST">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
+
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
+
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" placeholder="Your Email.." required>
+
+
+            <label for="Time">Time</label>
+            <select id="Time" name="Time">
+                <option value="9:00am">9:00am</option>
+                <option value="9:30am">9:30am</option>
+                <option value="10:30am">10:30am</option>
+                <option value="11:00am">11:00am</option>
+                <option value="11:30am">11:30am</option>
+                <option value="12:00pm">12:00pm</option>
+                <option value="12:30pm">12:30pm</option>
+                <option value="1:00pm">1:00pm</option>
+                <option value="1:30pm">1:30pm</option>
+                <option value="2:00pm">2:00pm</option>
+                <option value="2:30pm">2:30pm</option>
+                <option value="3:00pm">3:00pm</option>
+                <option value="3:30pm">3:30pm</option>
+                <option value="4:00pm">4:00pm</option>
+                <option value="4:30pm">4:30pm</option>
+                <option value="5:00pm">5:00pm</option>
+                <option value="5:30pm">5:30pm</option>
+            </select>
+                <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>

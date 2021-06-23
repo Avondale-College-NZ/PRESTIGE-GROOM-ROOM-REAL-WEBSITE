@@ -1,0 +1,34 @@
+﻿.body {
+    font-family: Verdana;
+    background-image: url(IMG_5574.jpg);
+}
+
+
+.input[type=text], select, textarea {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    box-sizing: border-box;
+    margin-top: 2px;
+    margin-bottom: 5px;
+    resize: vertical;
+}
+
+.input[type=submit] {
+    background-color: black;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: gold;
+}
+
+.container {
+    border-radius: 2px;
+    color: white;
+}
