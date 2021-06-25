@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace PRESTIGE_GROOM_ROOM_REAL_WEBSITE.ViewModels
 {
-    public class SpeakerViewModel : EditImageViewModel
+    public class StaffViewModel : EditImageViewModel
     {
         [Required]
         [Display(Name = "Name")]
