@@ -9,8 +9,8 @@ using PRESTIGE_GROOM_ROOM_REAL_WEBSITE.Data;
 namespace PRESTIGE_GROOM_ROOM_REAL_WEBSITE.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210623215447_InitialModel")]
-    partial class InitialModel
+    [Migration("20210629222434_update-database")]
+    partial class updatedatabase
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -28,7 +28,6 @@ namespace PRESTIGE_GROOM_ROOM_REAL_WEBSITE.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<int>("Experience")
-                        .HasMaxLength(100)
                         .HasColumnType("int");
 
                     b.Property<string>("Name")

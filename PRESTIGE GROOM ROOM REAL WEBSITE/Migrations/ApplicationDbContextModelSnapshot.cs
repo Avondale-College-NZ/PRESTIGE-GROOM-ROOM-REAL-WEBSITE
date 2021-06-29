@@ -26,7 +26,6 @@ namespace PRESTIGE_GROOM_ROOM_REAL_WEBSITE.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<int>("Experience")
-                        .HasMaxLength(100)
                         .HasColumnType("int");
 
                     b.Property<string>("Name")

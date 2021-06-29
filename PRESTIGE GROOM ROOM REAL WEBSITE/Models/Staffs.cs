@@ -21,7 +21,6 @@ namespace PRESTIGE_GROOM_ROOM_REAL_WEBSITE.Models
         public string Qualification { get; set; }
 
         [Required]
-        [StringLength(100)]
         public int Experience { get; set; }
 
         [Required]
