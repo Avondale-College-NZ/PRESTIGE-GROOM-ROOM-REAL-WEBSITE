@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace PRESTIGE_GROOM_ROOM_REAL_WEBSITE.Views.Home
 {
-    public class RegisterModel : PageModel
+    public class LoginModel : PageModel
     {
         public void OnGet()
         {
