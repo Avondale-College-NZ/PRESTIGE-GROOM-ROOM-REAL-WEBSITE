@@ -1,70 +1,40 @@
 ﻿@{
     ViewData["Title"] = "Book Now";
 }
-<head>
-    <link href="~/css/site - Copy.css" rel="stylesheet" />
-    <style>
-        /* Change the link color on hover */
-        li a:hover {
-            background-color: black;
-            color: white;
-        }
-    </style>
-</head>
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="~/css/BookNowStylesheet.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        body {
-            font-family: Verdana;
-        }
-
-
-        input[type=text], select, textarea {
-            width: 100%;
-            padding: 5px;
-            border: 1px solid #ccc;
-            border-radius: 2px;
-            box-sizing: border-box;
-            margin-top: 2px;
-            margin-bottom: 5px;
-            resize: vertical;
-        }
-
-        input[type=submit] {
-            background-color: black;
-            color: white;
-            padding: 12px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-            input[type=submit]:hover {
-                background-color: gold;
-            }
-
-        .container {
-            border-radius: 2px;
-            color: white;
-
-        }
-    </style>
 </head>
-<body class="slide4">
-    <h1 style="font-family:'verdana';" color:black;">Book Now</h1>
+<body>
+
+    <h3>Place A Booking</h3>
+
     <div class="container">
-        <form method="POST">
+        <form action="/action_page.php">
             <label for="fname">First Name</label>
-            <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
 
             <label for="lname">Last Name</label>
-            <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+            <label for="Haircut Style">Haircut Style</label>
+            <select id="Time" name="Time">
+                <option value="Mid Fade">Mid Fade</option>
+                <option value="Razor Fade">Razor Fade</option>
+                <option value="Zero Fade">Zero Fade</option>
+                <option value="Hot Towel Shave">Hot Towel Shave</option>
+                <option value="Style Cut">Style Cut</option>
+                <option value="Scissor Cut">Scissor Cut</option>
+                <option value="Clipper Cut">Clipper Cut</option>
+                <option value="Beard Line Up">Beard Line Up</option>
+                <option value="Beard Trim">Beard Trim</option>
+                <option value="Line Up">Line Up</option>
+            </select>
 
             <label for="email">Email</label>
             <input type="text" id="email" name="email" placeholder="Your Email.." required>
-
 
             <label for="Time">Time</label>
             <select id="Time" name="Time">
@@ -86,8 +56,12 @@
                 <option value="5:00pm">5:00pm</option>
                 <option value="5:30pm">5:30pm</option>
             </select>
-                <input type="submit" value="Submit">
+
+
+
+            <input type="submit" value="Submit">
         </form>
     </div>
+
 </body>
 </html>
