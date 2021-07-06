@@ -1,84 +1,33 @@
-﻿@{
-    ViewData["Title"] = "Contact Us";
+﻿@model ContactModel
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <h4>Send your comments.</h4>
+    <hr />
+    <div class="form-group">
+        @Html.LabelFor(m => m.SenderName, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.SenderName, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.SenderName)
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.SenderEmail, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.SenderEmail, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.SenderEmail)
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Message, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextAreaFor(m => m.Message, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Message)
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" class="btn btn-default" value="Send" />
+        </div>
+    </div>
 }
-<head>
-    <link href="~/css/site - Copy.css" rel="stylesheet" />
-    <style>
-        /* Change the link color on hover */
-        li a:hover {
-            background-color: black;
-            color: white;
-        }
-
-        body {
-            color: white;
-        }
-
-        h1 {
-            text-align: center;
-        }
-    </style>
-</head>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        body {
-            font-family: verdana;
-        }
-
-        * {
-            box-sizing: border-box;
-        }
-
-        input[type=text], select, textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-            resize: vertical;
-        }
-
-        input[type=submit] {
-            background-color: black;
-            color: white;
-            padding: 12px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-            input[type=submit]:hover {
-                background-color: gold;
-            }
-
-
-        .container {
-            border-radius: 5px;
-        }
-    </style>
-</head>
-<body class="slide2">
-
-    <h3>Contact Form</h3>
-<div class="container">
-    <form method="POST">
-        <label for="fname">First Name</label>
-        <input type="text" id="fname" name="firstname" placeholder="Your name..">
-
-        <label for="lname">Last Name</label>
-        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-
-        <label for="Email">Email</label>
-        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-
-        <label for="Inquiry">Inquiry</label>
-        <textarea id="Inquiry" name="Inquiry" placeholder="Write something.." style="height:200px"></textarea>
-
-        <input type="submit" value="Submit">
-    </form>
-</div>
-</body>
-</html>
