@@ -7,7 +7,7 @@ using PRESTIGE_GROOM_ROOM_REAL_WEBSITE.Data;
 
 namespace PRESTIGE_GROOM_ROOM_REAL_WEBSITE.Migrations
 {
-    [DbContext(typeof(ApplicationDbContext))]
+    [DbContext(typeof(AppDbContext))]
     partial class ApplicationDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

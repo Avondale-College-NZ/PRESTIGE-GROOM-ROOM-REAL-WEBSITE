@@ -8,7 +8,7 @@ using PRESTIGE_GROOM_ROOM_REAL_WEBSITE.Data;
 
 namespace PRESTIGE_GROOM_ROOM_REAL_WEBSITE.Migrations
 {
-    [DbContext(typeof(ApplicationDbContext))]
+    [DbContext(typeof(AppDbContext))]
     [Migration("20210629222434_update-database")]
     partial class updatedatabase
     {

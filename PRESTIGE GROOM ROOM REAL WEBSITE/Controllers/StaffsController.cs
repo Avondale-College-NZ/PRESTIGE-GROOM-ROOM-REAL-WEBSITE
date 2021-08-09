@@ -12,9 +12,9 @@ namespace PRESTIGE_GROOM_ROOM_REAL_WEBSITE.Controllers
 {
     public class StaffsController : Controller
     {
-        private readonly ApplicationDbContext _context;
+        private readonly AppDbContext _context;
 
-        public StaffsController(ApplicationDbContext context)
+        public StaffsController(AppDbContext context)
         {
             _context = context;
         }

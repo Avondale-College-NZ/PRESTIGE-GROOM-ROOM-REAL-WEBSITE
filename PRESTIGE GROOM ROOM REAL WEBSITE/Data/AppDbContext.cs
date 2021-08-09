@@ -4,9 +4,9 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace PRESTIGE_GROOM_ROOM_REAL_WEBSITE.Data
 {
-    public class ApplicationDbContext : IdentityDbContext
+    public class AppDbContext : IdentityDbContext
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) :
+        public AppDbContext(DbContextOptions<AppDbContext> options) :
             base(options)
         {
 
