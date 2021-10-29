@@ -18,8 +18,11 @@ namespace PRESTIGE_GROOM_ROOM_REAL_WEBSITE.Models
         public string Email { get; set; }
         [Required]
 
+        public string subject { get; set; }
         public string HaircutStyle { get; set; }
-        public string Time { get; set; }
+        public DateTime Time { get; set; }
+
+        public string Message { get; set; }
 
     }
 }

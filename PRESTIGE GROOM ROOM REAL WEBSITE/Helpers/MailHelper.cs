@@ -58,6 +58,9 @@ namespace PRESTIGE_GROOM_ROOM_REAL_WEBSITE.Helpers
             }
         }
 
-
+        internal bool Send(string email, string v, object subject, string body, List<string> fileNames)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
