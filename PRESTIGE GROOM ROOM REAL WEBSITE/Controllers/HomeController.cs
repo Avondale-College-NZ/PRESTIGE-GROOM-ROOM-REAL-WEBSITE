@@ -1,14 +1,17 @@
-﻿using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Logging;
-using PRESTIGE_GROOM_ROOM_REAL_WEBSITE.Helpers;
-using PRESTIGE_GROOM_ROOM_REAL_WEBSITE.Models;
+﻿using PRESTIGE_GROOM_ROOM_REAL_WEBSITE.Models;
 using PRESTIGE_GROOM_ROOM_REAL_WEBSITE.ViewModels;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Logging;
+using PRESTIGE_GROOM_ROOM_REAL_WEBSITE.Data;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using PRESTIGE_GROOM_ROOM_REAL_WEBSITE.Helpers;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+
 
 
 
@@ -68,9 +71,7 @@ namespace PRESTIGE_GROOM_ROOM_REAL_WEBSITE.Controllers
                     fileNames = new List<string>();
                     foreach (IFormFile attachment in attachments)
                     {
-                        var path = Path.Combine(webHostEnvironment.WebRootPath,
-                                                "uploads",
-                                                attachment.FileName);
+                        var path = Path.Combine(webHostEnvironment.WebRootPath, "uploads",attachment.FileName);
                         using (var stream = new FileStream(path, FileMode.Create))
                         {
                             attachment.CopyToAsync(stream);
