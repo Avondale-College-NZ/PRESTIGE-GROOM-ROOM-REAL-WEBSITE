@@ -11,9 +11,7 @@ using PRESTIGE_GROOM_ROOM_REAL_WEBSITE.Helpers;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
-
-
-
+using System.Threading.Tasks; // added this namespace for async to function
 
 namespace PRESTIGE_GROOM_ROOM_REAL_WEBSITE.Controllers
 {
@@ -21,7 +19,7 @@ namespace PRESTIGE_GROOM_ROOM_REAL_WEBSITE.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private IConfiguration configuration;
-        private object webHostEnvironment;
+        private readonly IWebHostEnvironment webHostEnvironment; //created readonly variable of type IWebHostEnvironment
 
         public HomeController(ILogger<HomeController> logger, IWebHostEnvironment hostEnvironment, IConfiguration _configuration)
         {
@@ -58,8 +56,8 @@ namespace PRESTIGE_GROOM_ROOM_REAL_WEBSITE.Controllers
             return View();
         }
 
-        [HttpPost]
-        public ActionResult MakeaBooking(BookingToEmailViewModel bookingToEmail, IFormFile[] attachments)
+        [HttpPost] //changed this to IActionResult asyc Task method
+        public async Task<IActionResult> MakeaBooking(BookingToEmailViewModel bookingToEmail, IFormFile[] attachments)
         {
             if (ModelState.IsValid)
             {
@@ -74,7 +72,7 @@ namespace PRESTIGE_GROOM_ROOM_REAL_WEBSITE.Controllers
                         var path = Path.Combine(webHostEnvironment.WebRootPath, "uploads",attachment.FileName);
                         using (var stream = new FileStream(path, FileMode.Create))
                         {
-                            attachment.CopyToAsync(stream);
+                            await attachment.CopyToAsync(stream); //added await keyword for this to take place before redirect to page
                         }
                         fileNames.Add(path);
                     }
@@ -88,7 +86,7 @@ namespace PRESTIGE_GROOM_ROOM_REAL_WEBSITE.Controllers
                     ViewBag.msg = "Failed";
                 }
             }
-            return View(bookingToEmail);
+            return RedirectToAction("Index"); //you can redirect to any of the action methods above or even the Home page = Index
         }
     }
 }

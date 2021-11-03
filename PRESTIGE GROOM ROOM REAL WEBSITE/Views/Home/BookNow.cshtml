@@ -11,8 +11,9 @@
 
     <h3>Place A Booking</h3>
 
-    <div class="container">
-        <form method="post" enctype="multipart/form-data" asp-controller="HomeController" asp-action="BookingToEmail">
+    <div class="container"> 
+        @*changed the name of the controller to Home and replace the action method with MakeaBooking*@
+        <form method="post" enctype="multipart/form-data" asp-controller="Home" asp-action="MakeaBooking">
             <label for="name">Name</label>
             <input type="text" id="name" name="name" placeholder="Your name..">
 
